@@ -12,15 +12,19 @@ import javafx.scene.shape.Line;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.QuadCurve;
 import javafx.scene.shape.Rectangle;
+import net.jcip.annotations.GuardedBy;
+import net.jcip.annotations.ThreadSafe;
 
 /**
  * @author Frank Grimm
  * 
  */
+@ThreadSafe
 public class WhiteBoard extends Group {
 	public WhiteBoard() {
 	}
 
+	@GuardedBy("this")
 	private synchronized void addNode(final Node node) {
 		if (Platform.isFxApplicationThread()) {
 			if (!getChildren().add(node))
@@ -39,6 +43,7 @@ public class WhiteBoard extends Group {
 		}
 	}
 
+	@GuardedBy("this")
 	private synchronized void removeNode(final Node node) {
 		if (Platform.isFxApplicationThread()) {
 			if (!getChildren().remove(node))
