@@ -1,1 +1,1 @@
-Test
+https://github.com/fgr/whz-gdp.git
