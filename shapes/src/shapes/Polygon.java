@@ -54,6 +54,14 @@ public class Polygon extends Shape {
 	}
 
 	/**
+	 * Setzt die {@link Point Punkte} des {@link Polygon}s neu.
+	 */
+	public void setPoints(List<Point> points) {
+		this.points.clear();
+		this.points.addAll(points);
+	}
+
+	/**
 	 * Bewegt das {@link Polygon}.
 	 */
 	@Override
