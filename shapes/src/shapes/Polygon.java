@@ -59,6 +59,7 @@ public class Polygon extends Shape {
 	public void setPoints(List<Point> points) {
 		this.points.clear();
 		this.points.addAll(points);
+		draw();
 	}
 
 	/**
