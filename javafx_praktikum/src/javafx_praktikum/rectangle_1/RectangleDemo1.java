@@ -1,4 +1,4 @@
-package javafx_praktikum;
+package javafx_praktikum.rectangle_1;
 
 import java.math.BigDecimal;
 
@@ -22,7 +22,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import de.thomasbolz.javafx.NumberSpinner;
 
-public class RectangleDemo extends Application {
+public class RectangleDemo1 extends Application {
 	public static void main(String[] args) {
 		launch(args);
 	}
