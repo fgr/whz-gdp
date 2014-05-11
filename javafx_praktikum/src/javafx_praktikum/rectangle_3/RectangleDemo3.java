@@ -1,16 +1,16 @@
-package javafx_praktikum.rectangle_2;
+package javafx_praktikum.rectangle_3;
 
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx_praktikum.rectangle_2.ctrl.AreaViewController;
-import javafx_praktikum.rectangle_2.model.AreaModel;
-import javafx_praktikum.rectangle_2.view.AreaView;
-import javafx_praktikum.rectangle_2.view.AreaView.AreaCalcViewConfig;
-import javafx_praktikum.rectangle_2.view.AreaView.DimensionViewConfig;
+import javafx_praktikum.rectangle_3.ctrl.AreaViewController;
+import javafx_praktikum.rectangle_3.model.AreaModel;
+import javafx_praktikum.rectangle_3.view.AreaView;
+import javafx_praktikum.rectangle_3.view.AreaView.AreaCalcViewConfig;
+import javafx_praktikum.rectangle_3.view.AreaView.DimensionViewConfig;
 
-public class RectangleDemo2 extends Application {
+public class RectangleDemo3 extends Application {
 	private static final int WIDTH_MIN = 0;
 	private static final int WIDTH_MAX = 100;
 	private static final int WIDTH_START = 10;

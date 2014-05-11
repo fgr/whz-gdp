@@ -7,11 +7,11 @@ import javafx_praktikum.rectangle_2.model.AreaModel;
 import javafx_praktikum.rectangle_2.view.AreaView;
 import javafx_praktikum.rectangle_2.view.AreaView.AreaCalcViewObserver;
 
-public class AreaController implements AreaCalcViewObserver {
+public class AreaViewController implements AreaCalcViewObserver {
 	private final AreaModel model;
 	private final AreaView view;
 
-	public AreaController(AreaModel model, AreaView view) {
+	public AreaViewController(AreaModel model, AreaView view) {
 		this.model = model;
 		this.view = view;
 		model.addObserver(new Observer() {
