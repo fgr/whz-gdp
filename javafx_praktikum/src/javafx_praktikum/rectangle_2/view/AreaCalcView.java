@@ -4,6 +4,8 @@ import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
 
+import net.jcip.annotations.GuardedBy;
+import net.jcip.annotations.NotThreadSafe;
 import de.thomasbolz.javafx.NumberSpinner;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -26,6 +28,7 @@ import javafx_praktikum.rectangle_2.view.AreaCalcView.AreaCalcViewObserver.Event
  * 
  * @author Frank Grimm
  */
+@NotThreadSafe
 public final class AreaCalcView extends GridPane {
 	/**
 	 * Repraesentiert {@link #min Minimum}, {@link #max Maxium} und {@link #start Anfangswert} fuer die Anzeige einer Dimensionsgroesse.
@@ -73,8 +76,7 @@ public final class AreaCalcView extends GridPane {
 
 	private final String AREA_FORMAT = "Area: %1$,.2f square units";
 
-	// TODO add thread annotations
-	// @GuardedBy("this")
+	@GuardedBy("this")
 	private Set<AreaCalcViewObserver> observers = new HashSet<>();
 
 	private NumberSpinner heightSpnr;

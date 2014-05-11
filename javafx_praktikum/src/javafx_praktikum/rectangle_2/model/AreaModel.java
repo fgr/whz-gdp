@@ -2,11 +2,14 @@ package javafx_praktikum.rectangle_2.model;
 
 import java.util.Observable;
 
-// TODO @ThreadSafe
+import net.jcip.annotations.GuardedBy;
+import net.jcip.annotations.ThreadSafe;
+
+@ThreadSafe
 public class AreaModel extends Observable {
-	// TODO @GuardedBy("this");
+	@GuardedBy("this")
 	private double width;
-	// TODO @GuardedBy("this");
+	@GuardedBy("this")
 	private double height;
 
 	public AreaModel(double width, double height) {
