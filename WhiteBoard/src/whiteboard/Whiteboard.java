@@ -1,10 +1,10 @@
-package whiteBoard;
+package whiteboard;
 
 import java.util.concurrent.ExecutionException;
 
 import javafx.application.Platform;
-import javafx.scene.Group;
 import javafx.scene.Node;
+import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Ellipse;
@@ -20,8 +20,8 @@ import net.jcip.annotations.ThreadSafe;
  * 
  */
 @ThreadSafe
-public class WhiteBoard extends Group {
-	public WhiteBoard() {
+public class Whiteboard extends Pane {
+	public Whiteboard() {
 	}
 
 	@GuardedBy("this")
@@ -428,7 +428,7 @@ public class WhiteBoard extends Group {
 	 * Loescht ein Zeichenobjekt von der Zeichenfläche.
 	 * <p>
 	 * Dazu muss das von den Zeichenmethoden zurueckgelieferte Objekt als
-	 * Argument an diese {@link WhiteBoard#removeShape(Object) Methode hier}
+	 * Argument an diese {@link Whiteboard#removeShape(Object) Methode hier}
 	 * uebergeben werden.
 	 * 
 	 * @param o
@@ -438,7 +438,7 @@ public class WhiteBoard extends Group {
 	public synchronized void removeShape(final Object o) {
 		if (!getChildren().contains(o))
 			throw new IllegalArgumentException("Could not remove Shape " + o
-					+ "; it is not shown on this WhiteBoard!");
+					+ "; it is not shown on this Whiteboard!");
 		removeNode((Node) o);
 	}
 }

@@ -1,4 +1,4 @@
-package whiteBoard;
+package whiteboard;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
