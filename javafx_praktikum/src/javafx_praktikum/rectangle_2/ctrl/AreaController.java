@@ -4,14 +4,14 @@ import java.util.Observable;
 import java.util.Observer;
 
 import javafx_praktikum.rectangle_2.model.AreaModel;
-import javafx_praktikum.rectangle_2.view.AreaCalcView;
-import javafx_praktikum.rectangle_2.view.AreaCalcView.AreaCalcViewObserver;
+import javafx_praktikum.rectangle_2.view.AreaView;
+import javafx_praktikum.rectangle_2.view.AreaView.AreaCalcViewObserver;
 
-public class AreaCalcController implements AreaCalcViewObserver {
+public class AreaController implements AreaCalcViewObserver {
 	private final AreaModel model;
-	private final AreaCalcView view;
+	private final AreaView view;
 
-	public AreaCalcController(AreaModel model, AreaCalcView view) {
+	public AreaController(AreaModel model, AreaView view) {
 		this.model = model;
 		this.view = view;
 		model.addObserver(new Observer() {

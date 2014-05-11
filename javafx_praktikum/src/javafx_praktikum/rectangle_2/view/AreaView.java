@@ -21,15 +21,15 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import javafx_praktikum.rectangle_2.view.AreaCalcView.AreaCalcViewObserver.EventType;
+import javafx_praktikum.rectangle_2.view.AreaView.AreaCalcViewObserver.EventType;
 
 /**
- * View für die Eingabe der Reckteck-Dimensionen, Darstellung des Rechtecks und Ausgabe des berechneten Flächeninhalts.
+ * View für die Eingabe der Rechteck-Dimensionen, Darstellung des Rechtecks und Ausgabe des berechneten Flächeninhalts.
  * 
  * @author Frank Grimm
  */
 @NotThreadSafe
-public final class AreaCalcView extends GridPane {
+public final class AreaView extends GridPane {
 	/**
 	 * Repraesentiert {@link #min Minimum}, {@link #max Maxium} und {@link #start Anfangswert} fuer die Anzeige einer Dimensionsgroesse.
 	 */
@@ -86,7 +86,7 @@ public final class AreaCalcView extends GridPane {
 	private Label areaLbl;
 	private Rectangle rectangle;
 
-	public AreaCalcView(AreaCalcViewConfig cfg) {
+	public AreaView(AreaCalcViewConfig cfg) {
 		createControls(cfg);
 	}
 

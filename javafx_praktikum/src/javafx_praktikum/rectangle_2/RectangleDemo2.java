@@ -4,11 +4,11 @@ import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx_praktikum.rectangle_2.ctrl.AreaCalcController;
+import javafx_praktikum.rectangle_2.ctrl.AreaController;
 import javafx_praktikum.rectangle_2.model.AreaModel;
-import javafx_praktikum.rectangle_2.view.AreaCalcView;
-import javafx_praktikum.rectangle_2.view.AreaCalcView.AreaCalcViewConfig;
-import javafx_praktikum.rectangle_2.view.AreaCalcView.DimensionViewConfig;
+import javafx_praktikum.rectangle_2.view.AreaView;
+import javafx_praktikum.rectangle_2.view.AreaView.AreaCalcViewConfig;
+import javafx_praktikum.rectangle_2.view.AreaView.DimensionViewConfig;
 
 public class RectangleDemo2 extends Application {
 	private static final int WIDTH_MIN = 0;
@@ -37,10 +37,10 @@ public class RectangleDemo2 extends Application {
 				new DimensionViewConfig(HEIGHT_MIN, HEIGHT_MAX, height));
 
 		AreaModel model = new AreaModel(width, height);
-		AreaCalcView view = new AreaCalcView(cfg);
+		AreaView view = new AreaView(cfg);
 
 		@SuppressWarnings("unused")
-		AreaCalcController crtl = new AreaCalcController(model, view);
+		AreaController crtl = new AreaController(model, view);
 
 		Group root = (Group) scene.getRoot();
 		root.getChildren().add(view);
