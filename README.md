@@ -49,7 +49,7 @@ Damit Eclipse-Projekte die JavaFX-Bibliothek verwenden können, richten Sie zu e
 5. Den Variablen-Dialog mit "OK" schließen.
 6. Den Einstallungs-Dialog mit "OK" schließen.
  
-##3. Eclipse-Projekte zu JavaFX-Bibliothek verweisen
+##3. JavaFX-Bibliothek für Eclipse-Projekte einrichten
 
 Damit ein Eclipse-Projekt die Klassen der JavaFX-Bibliothek verwenden kann, muss der Class-Path des Projekts einen Verweis auf diese Bibliothek beinhalten:
 
