@@ -1,1 +1,1 @@
-# Shapes-Projekt fuer JavaFX-WhiteBoard.
+# Shapes-Projekt fuer JavaFX-Whiteboard.
