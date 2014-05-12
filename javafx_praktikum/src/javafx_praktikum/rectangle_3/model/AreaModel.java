@@ -24,7 +24,7 @@ public class AreaModel implements PropertyChangeObservable {
 	private double height;
 
 	@GuardedBy("this")
-	private PropertyChangeObservableImpl observalbeDelegate;
+	private final PropertyChangeObservableImpl observalbeDelegate = new PropertyChangeObservableImpl();
 
 	public AreaModel(double width, double height) {
 		this.width = width;
@@ -56,12 +56,12 @@ public class AreaModel implements PropertyChangeObservable {
 	}
 
 	@Override
-	public void addPropertyChangeListener(PropertyChangeListener listener) {
+	public synchronized void addPropertyChangeListener(PropertyChangeListener listener) {
 		observalbeDelegate.addPropertyChangeListener(listener);
 	}
 
 	@Override
-	public void removePropertyChangeListener(PropertyChangeListener listener) {
+	public synchronized void removePropertyChangeListener(PropertyChangeListener listener) {
 		observalbeDelegate.removePropertyChangeListener(listener);
 	}
 

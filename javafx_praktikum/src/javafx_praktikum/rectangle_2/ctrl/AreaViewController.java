@@ -59,6 +59,6 @@ public class AreaViewController implements AreaCalcViewObserver {
 
 	private void updateView() {
 		view.updateRectangleDimensions(model.getWidth(), model.getHeight());
-		view.updateArea(model.getArea());
+		view.updateRectangleArea(model.getArea());
 	}
 }

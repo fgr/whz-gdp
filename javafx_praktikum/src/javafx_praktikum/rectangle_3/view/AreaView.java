@@ -91,15 +91,23 @@ public final class AreaView extends GridPane {
 	}
 
 	public void updateRectangleDimensions(double width, double height) {
+		updateRectangleWidth(width);
+		updateRectangleHeight(height);
+	}
+
+	public void updateRectangleWidth(double width) {
 		widthSpnr.setNumber(new BigDecimal(width));
 		widthSldr.setValue(width);
+		rectangle.setWidth(width);
+	}
+
+	public void updateRectangleHeight(double height) {
 		heightSpnr.setNumber(new BigDecimal(height));
 		heightSldr.setValue(height);
-		rectangle.setWidth(width);
 		rectangle.setHeight(height);
 	}
 
-	public void updateArea(double area) {
+	public void updateRectangleArea(double area) {
 		areaLbl.setText(String.format(AREA_FORMAT, area));
 	}
 

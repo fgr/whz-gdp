@@ -44,7 +44,9 @@ public class AreaViewController implements AreaCalcViewObserver, PropertyChangeL
 	}
 
 	@Override
-	public void propertyChange(PropertyChangeEvent evt) {
+	public void propertyChange(PropertyChangeEvent e) {
+		if(AreaModel.PROPERTY_WIDTH.equals(e.getPropertyName()))
+			view.updateRectangleDimensions(model.getWidth(), model.getHeight());
 		updateView();
 	}
 
@@ -58,7 +60,7 @@ public class AreaViewController implements AreaCalcViewObserver, PropertyChangeL
 	}
 
 	private void updateView() {
-		view.updateRectangleDimensions(model.getWidth(), model.getHeight());
-		view.updateArea(model.getArea());
+		
+		view.updateRectangleArea(model.getArea());
 	}
 }

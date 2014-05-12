@@ -99,7 +99,7 @@ public final class AreaView extends GridPane {
 		rectangle.setHeight(height);
 	}
 
-	public void updateArea(double area) {
+	public void updateRectangleArea(double area) {
 		areaLbl.setText(String.format(AREA_FORMAT, area));
 	}
 
