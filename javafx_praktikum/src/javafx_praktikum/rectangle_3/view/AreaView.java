@@ -63,11 +63,11 @@ public final class AreaView extends GridPane {
 		public static enum EventType {
 			/** Relative Aenderung der Breite. */
 			CHANGE_WIDTH_BY, //
-			/** Absulute Aenderung der Breite. */
+			/** Absolute Aenderung der Breite. */
 			SET_WIDTH_TO, //
 			/** Relative Aenderung der Hoehe. */
 			CHANGE_HEIGHT_BY, //
-			/** Absulute Aenderung der Hoehe. */
+			/** Absolute Aenderung der Hoehe. */
 			SET_HEIGHT_TO,
 		}
 

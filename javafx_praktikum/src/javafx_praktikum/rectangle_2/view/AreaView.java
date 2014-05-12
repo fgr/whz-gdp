@@ -111,7 +111,7 @@ public final class AreaView extends GridPane {
 		observers.remove(o);
 	}
 
-	private synchronized void notifyObserver(EventType type, Object value) {
+	private synchronized void notifyObservers(EventType type, Object value) {
 		for (AreaCalcViewObserver o : observers)
 			o.onViewEvent(type, value);
 	}
@@ -134,7 +134,7 @@ public final class AreaView extends GridPane {
 				/** Hoehe des Rechtecks wurde durch {@link AreaCalcView#heightSpnr} geaendert. */
 				public void run() {
 					double newHeight = heightSpnr.numberProperty().get().doubleValue();
-					notifyObserver(EventType.SET_HEIGHT_TO, newHeight);
+					notifyObservers(EventType.SET_HEIGHT_TO, newHeight);
 				}
 			});
 			add(heightSpnr, 0, 0);
@@ -145,7 +145,7 @@ public final class AreaView extends GridPane {
 					/** Hoehe des Rechtecks wurde durch {@link AreaCalcView#heightSldr} geaendert. */
 					public void run() {
 						double newHeight = heightSldr.getValue();
-						notifyObserver(EventType.SET_HEIGHT_TO, newHeight);
+						notifyObservers(EventType.SET_HEIGHT_TO, newHeight);
 					}
 				});
 				add(heightSldr, 0, 1);
@@ -158,7 +158,7 @@ public final class AreaView extends GridPane {
 				/** Breite des Rechtecks wurde durch {@link AreaCalcView#widthSpnr} geaendert. */
 				public void run() {
 					double newWidth = widthSpnr.numberProperty().get().doubleValue();
-					notifyObserver(EventType.SET_WIDTH_TO, newWidth);
+					notifyObservers(EventType.SET_WIDTH_TO, newWidth);
 				}
 			});
 			add(widthSpnr, 1, 2);
@@ -170,7 +170,7 @@ public final class AreaView extends GridPane {
 				/** Breite des Rechtecks wurde durch {@link AreaCalcView#widthSldr} geaendert. */
 				public void run() {
 					double newWidth = widthSldr.getValue();
-					notifyObserver(EventType.SET_WIDTH_TO, newWidth);
+					notifyObservers(EventType.SET_WIDTH_TO, newWidth);
 				}
 			});
 			add(widthSldr, 2, 2);
@@ -187,16 +187,16 @@ public final class AreaView extends GridPane {
 					KeyCode keyCode = keyEvent.getCode();
 					if (keyCode.equals(KeyCode.RIGHT)) {
 						// Breite des Rechtecks vergroessern
-						notifyObserver(EventType.CHANGE_WIDTH_BY, 1);
+						notifyObservers(EventType.CHANGE_WIDTH_BY, 1);
 					} else if (keyCode.equals(KeyCode.LEFT)) {
 						// Breite des Rechtecks verkleinern
-						notifyObserver(EventType.CHANGE_WIDTH_BY, -1);
+						notifyObservers(EventType.CHANGE_WIDTH_BY, -1);
 					} else if (keyCode.equals(KeyCode.UP)) {
 						// Hoehe des Rechtecks vergroessern
-						notifyObserver(EventType.CHANGE_HEIGHT_BY, 1);
+						notifyObservers(EventType.CHANGE_HEIGHT_BY, 1);
 					} else if (keyCode.equals(KeyCode.DOWN)) {
 						// Hoehe des Rechtecks verkleinern
-						notifyObserver(EventType.CHANGE_HEIGHT_BY, -1);
+						notifyObservers(EventType.CHANGE_HEIGHT_BY, -1);
 					}
 				}
 			});
