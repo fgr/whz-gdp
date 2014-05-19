@@ -1,9 +1,6 @@
 package asteroids.model.mshapes;
 
-/**
- * @author Frank Grimm, Mai 2014
- */
-public final class MRectangle extends MPolygon {
+public class MRectangle extends MPolygon {
 	public MRectangle(double topLeftX, double topLeftY, double lx, double ly) {
 	}
 

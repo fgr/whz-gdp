@@ -1,8 +1,5 @@
 package asteroids.model.mshapes;
 
-/**
- * @author Frank Grimm, Mai 2014
- */
 public final class MPoint {
 	public double x;
 	public double y;

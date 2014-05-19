@@ -1,9 +1,7 @@
 package asteroids.model.mshapes;
 
-/**
- * @author Frank Grimm, Mai 2014
- */
-public final class MCircle implements IMShape {
+public class MCircle implements IMShape {
+
 	private final MPoint center;
 	private final double radius;
 

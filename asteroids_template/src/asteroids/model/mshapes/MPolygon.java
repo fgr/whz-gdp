@@ -1,17 +1,19 @@
 package asteroids.model.mshapes;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * @author Frank Grimm, Mai 2014
- */
 public class MPolygon implements IMShape {
 	protected ArrayList<MPoint> points;
 
+	public MPolygon(Collection<? extends MPoint> points) {
+		points = new ArrayList<>(points);
+	}
+
 	public MPolygon() {
-		points = new ArrayList<>();
+		this(Collections.<MPoint> emptyList());
 	}
 
 	public List<MPoint> getPoints() {

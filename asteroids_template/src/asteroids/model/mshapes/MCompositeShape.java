@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public final class MCompositeShape implements IMShape {
+public class MCompositeShape implements IMShape {
 	private final List<IMShape> shapes;
 
 	public MCompositeShape(IMShape... s) {
