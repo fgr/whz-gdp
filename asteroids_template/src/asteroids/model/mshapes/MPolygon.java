@@ -9,7 +9,7 @@ public class MPolygon implements IMShape {
 	protected ArrayList<MPoint> points;
 
 	public MPolygon(Collection<? extends MPoint> points) {
-		points = new ArrayList<>(points);
+		this.points = new ArrayList<>(points);
 	}
 
 	public MPolygon() {
