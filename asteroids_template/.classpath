@@ -4,5 +4,10 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="lib/jcip-annotations.jar"/>
 	<classpathentry kind="lib" path="lib/commons-math3-3.2/commons-math3-3.2.jar"/>
+	<classpathentry kind="var" path="JAVAFX_JAR">
+		<attributes>
+			<attribute name="javadoc_location" value="http://docs.oracle.com/javafx/2/api/"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
