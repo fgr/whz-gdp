@@ -1,19 +1,45 @@
 package asteroids.model;
 
-public class SpaceshipModel {
+import java.util.Arrays;
+import java.util.List;
+
+import asteroids.model.mshapes.MPoint;
+import asteroids.model.mshapes.MPolygon;
+
+public class SpaceshipModel extends SpriteModel {
+	private final MPolygon polygon;
+
+	public SpaceshipModel(double x, double y) {
+		super(x, y);
+		polygon = new MPolygon(Arrays.asList(new MPoint(x - 30, y + 20),
+				new MPoint(x - 30, y - 20), new MPoint(x + 30, y)));
+	}
+
 	public void accelerate() {
-		// TODO Auto-generated method stub
+		velocity = (velocity * 1.1) + 1;
 	}
 
 	public void decelerate() {
-		// TODO Auto-generated method stub
+		if (velocity > 0) {
+			velocity = (velocity / 1.1) - 1;
+			if (velocity < 0)
+				velocity = 0;
+		}
 	}
 
 	public void turnLeft() {
-		// TODO Auto-generated method stub
+		rotate(-5);
 	}
 
 	public void turnRight() {
-		// TODO Auto-generated method stub
+		rotate(5);
+	}
+
+	public List<MPoint> getPoints() {
+		return polygon.getPoints();
+	}
+
+	private void rotate(double angleDegree) {
+		// TODO
 	}
 }
