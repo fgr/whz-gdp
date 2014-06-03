@@ -55,9 +55,7 @@ public class Point extends Object {
 		double newX = cx * Math.cos(rads) + cy * Math.sin(rads);
 		double newY = -cx * Math.sin(rads) + cy * Math.cos(rads);
 
-		int xx = (int) Math.round(newX);
-		int yy = (int) Math.round(newY);
-		x = xx + centre.getX();
-		y = yy + centre.getY();
+		x = newX + centre.getX();
+		y = newY + centre.getY();
 	}
 }
