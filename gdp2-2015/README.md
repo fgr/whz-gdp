@@ -47,3 +47,4 @@ Am einfachsten können Sie JavaFX für Eclipse konfigurieren, indem Sie [e(fx)ec
 3. "Install" klicken (im Resultat "e(fx)clipse")
 4. Den Anweisung folgen ...
 
+Weitere Details zur Installation [finden Sie hier](http://www.eclipse.org/efxclipse/install.html).
