@@ -58,10 +58,19 @@ public class Point {
 		double cos = Math.cos(rad);
 		double sin = Math.sin(rad);
 
-		// translate to origin, rotate, translate back
-		double xnew = (x - center.x) * cos - (y - center.y) * sin + center.x;
-		double ynew = (y - center.y) * cos + (x - center.x) * sin + center.y;
+		// 1. translate to origin (center moves to origin, x moves relative to center)
+		double xnew = x - center.x;
+		double ynew = y - center.y;
 
+		// 2. rotate
+		xnew = (xnew * cos) - (ynew * sin);
+		ynew = (ynew * cos) + (xnew * sin);
+
+		// 3. translate back to center
+		xnew += center.x;
+		ynew += center.y;
+
+		// 4. update point's coordinates
 		x = xnew;
 		y = ynew;
 	}
