@@ -12,7 +12,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		primaryStage.setTitle("Drawing board");
 		DrawingBoard board = new DrawingBoard(primaryStage);
-		Circle c = board.drawCircle(50, 100, 25, Color.GREEN);
+		Circle c = board.drawCircle(0, 0, 25, Color.GREEN);
 		c.move(100, 50);
 		primaryStage.show();
 	}

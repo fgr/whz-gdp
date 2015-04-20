@@ -5,7 +5,6 @@ import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
-import javafx2.shapes.Circle;
 
 public class DrawingBoard {
 	private Canvas canvas;
@@ -18,7 +17,7 @@ public class DrawingBoard {
 	}
 
 	public Circle drawCircle(double centerX, double centerY, double radius, Paint fill) {
-		Circle c = new javafx2.shapes.Circle(centerX, centerY, radius, fill, canvas.getGraphicsContext2D());
+		Circle c = new Circle(centerX, centerY, radius, fill, canvas.getGraphicsContext2D());
 		c.draw();
 		return c;
 	}

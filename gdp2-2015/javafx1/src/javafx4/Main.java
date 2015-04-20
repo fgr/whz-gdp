@@ -14,7 +14,7 @@ public class Main extends Application {
 		primaryStage.setTitle("Drawing board");
 		DrawingBoard board = new DrawingBoard(primaryStage);
 		Circle c = board.drawCircle(25, 50, 15, Color.BLUEVIOLET);
-		c.move(100, 50);
+		// c.move(100, 50);
 		Rectangle r = board.drawRect(25, 50, 15, 35, null);
 		primaryStage.show();
 	}

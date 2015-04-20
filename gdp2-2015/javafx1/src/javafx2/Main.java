@@ -12,8 +12,8 @@ public class Main extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		primaryStage.setTitle("Drawing board");
 		DrawingBoard board = new DrawingBoard(primaryStage);
-		Circle c1 = board.drawCircle(200, 100, 25, Color.BLUE);
-		// c1.move(100, 50);
+		Circle c1 = board.drawCircle(0, 0, 25, Color.BLUE);
+		c1.move(100, 50);
 		Circle c2 = board.drawCircle(50, 150, 50, null);
 		primaryStage.show();
 	}

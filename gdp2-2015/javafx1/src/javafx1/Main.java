@@ -12,6 +12,7 @@ public class Main extends Application {
 		primaryStage.setTitle("Drawing board");
 		DrawingBoard board = new DrawingBoard(primaryStage);
 		board.drawCircle(100, 50, 25);
+		board.drawCircle(10, 50, 205);
 		primaryStage.show();
 	}
 

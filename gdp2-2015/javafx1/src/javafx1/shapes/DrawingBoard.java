@@ -19,7 +19,6 @@ public class DrawingBoard {
 
 	public void drawCircle(double centerX, double centerY, double radius) {
 		GraphicsContext gc = canvas.getGraphicsContext2D();
-		gc.setFill(Color.GREEN);
 		gc.setStroke(Color.BLUE);
 		gc.setLineWidth(5);
 		gc.strokeOval(centerX, centerY, radius, radius);
