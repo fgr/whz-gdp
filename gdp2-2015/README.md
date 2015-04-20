@@ -38,7 +38,7 @@ Einige Eclipse-Projekte in [diesem GitHub-Repository](https://github.com/fgr/whz
   3. ... und aktivieren dieses JDK durch Anklicken des Hakens als Ihren Eclipse-Compiler (und -Laufzeitumgebung).
     - Compile-Fehler in der Art "Access restriction: The type Application is not accessible due to restriction on required library jfxrt.jar" sollten nun nicht mehr existieren.
 
-##2. JavaFX via e(fx)clipse einrichten
+##2. JavaFX mithilfe von e(fx)clipse einrichten
 
 Am einfachsten können Sie JavaFX für Eclipse konfigurieren, indem Sie [e(fx)eclipse](http://www.eclipse.org/efxclipse/index.html) in Ihr Eclipse installieren:
 
