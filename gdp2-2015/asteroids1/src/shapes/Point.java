@@ -80,11 +80,8 @@ public class Point {
 
 		// Also possible: Do rotation in one step
 		//
-		// double newX = Math.cos(rad) * (x - center.x) - Math.sin(rad) * (y -
-		// center.y) + center.x;
-		//
-		// double newY = Math.sin(rad) * (x - center.x) + Math.cos(rad) * (y -
-		// center.y) + center.y;
+		// double newX = cos * (x - center.x) - sin * (y - center.y) + center.x;
+		// double newY = sin * (x - center.x) + cos * (y - center.y) + center.y;
 		//
 		// x = newX;
 		// y = newY;
