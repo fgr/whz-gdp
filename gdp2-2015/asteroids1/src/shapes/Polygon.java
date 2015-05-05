@@ -17,9 +17,10 @@ public class Polygon {
 
 	public Polygon(List<Point> points, Paint fill) {
 		Objects.requireNonNull(points);
-		if (points.size() < 3) {
-			throw new IllegalArgumentException("A ploygon must consist of at least 3 points.");
-		}
+		// if (points.size() < 3) {
+		// throw new
+		// IllegalArgumentException("A ploygon must consist of at least 3 points.");
+		// }
 
 		fillColor = fill;
 

@@ -54,25 +54,40 @@ public class Point {
 	}
 
 	public void rotate(Point center, double degrees) {
-		double rad = Math.toRadians(degrees);
+		// Convert degree to radiant (see also: Math.toRadians(degrees))
+		double rad = degrees * (Math.PI / 180);
+
+		// double rad = Math.toRadians(degrees);
 		double cos = Math.cos(rad);
 		double sin = Math.sin(rad);
 
-		// 1. translate to origin (center moves to origin, x moves relative to center)
-		double xnew = x - center.x;
-		double ynew = y - center.y;
+		// 1. translate to origin (center moves to origin, x moves relative to
+		// center)
+		double xnew1 = x - center.x;
+		double ynew1 = y - center.y;
 
 		// 2. rotate
-		xnew = (xnew * cos) - (ynew * sin);
-		ynew = (ynew * cos) + (xnew * sin);
+		double xnew2 = (xnew1 * cos) - (ynew1 * sin);
+		double ynew2 = (ynew1 * cos) + (xnew1 * sin);
 
 		// 3. translate back to center
-		xnew += center.x;
-		ynew += center.y;
+		double xnew3 = xnew2 + center.x;
+		double ynew3 = ynew2 + center.y;
 
 		// 4. update point's coordinates
-		x = xnew;
-		y = ynew;
+		x = xnew3;
+		y = ynew3;
+
+		// Also possible: Do rotation in one step
+		//
+		// double newX = Math.cos(rad) * (x - center.x) - Math.sin(rad) * (y -
+		// center.y) + center.x;
+		//
+		// double newY = Math.sin(rad) * (x - center.x) + Math.cos(rad) * (y -
+		// center.y) + center.y;
+		//
+		// x = newX;
+		// y = newY;
 	}
 
 	public void move(double deltaX, double deltaY) {

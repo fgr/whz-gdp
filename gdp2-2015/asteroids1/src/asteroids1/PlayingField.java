@@ -17,16 +17,18 @@ import shapes.Polygon;
 
 /**
  * 
- * <em>Achtung:</em> Das ist kein guter Quellcode! Diese Klasse ({@link PlayingField}) hat zu viele Verantwortlichkeiten, d.h., sie kümmert sich um zu
- * viele Dinge. Wir werden diesen Nachteil in den folgenden Versionen des Asteroid-Spiels beheben und besseren Quellcode schreiben.
+ * <em>Achtung:</em> Das ist kein guter Quellcode! Diese Klasse (
+ * {@link PlayingField}) hat zu viele Verantwortlichkeiten, d.h., sie kümmert
+ * sich um zu viele Dinge. Wir werden diesen Nachteil in den folgenden Versionen
+ * des Asteroid-Spiels beheben und besseren Quellcode schreiben.
  * 
  * @author Frank Grimm
  */
 class PlayingField {
 	private Canvas canvas;
-	Polygon spaceshipShape;
-	double spaceshipRotationAngle, spaceshipDirection;
-	double spaceshipSpeed;
+	private Polygon spaceshipShape;
+	private double spaceshipRotationAngle, spaceshipDirection;
+	private double spaceshipSpeed;
 
 	public PlayingField(Stage stage) {
 		Objects.requireNonNull(stage);
@@ -38,6 +40,7 @@ class PlayingField {
 				new Point(spaceshipCenter.getX() + 10, spaceshipCenter.getY() + 40));
 
 		spaceshipShape = new Polygon(points, null);
+
 		spaceshipRotationAngle = 0;
 		spaceshipDirection = 180;
 
@@ -87,7 +90,8 @@ class PlayingField {
 		gc.setFill(Color.GREEN);
 		gc.fillRect(spaceshipShape.centerOfMass().getX(), spaceshipShape.centerOfMass().getY(), 1, 1);
 
-		spaceshipShape.rotate(spaceshipShape.centerOfMass(), spaceshipRotationAngle);
+		if (spaceshipRotationAngle != 0)
+			spaceshipShape.rotate(spaceshipShape.centerOfMass(), spaceshipRotationAngle);
 		spaceshipDirection -= spaceshipRotationAngle;
 		if (spaceshipDirection > 360)
 			spaceshipDirection = 0;
